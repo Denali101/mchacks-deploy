@@ -12,7 +12,7 @@ const app = express();
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
     cors: {
-        origin: "https://mchacks-deploy.vercel.app/",
+        origin: "https://mchacks-deploy.onrender.com",
         methods: ["GET", "POST"]
     }
 });
@@ -31,7 +31,7 @@ fetch(`${API_URL}/api/data`)
   .then(data => console.log(data))
   .catch(error => console.error('Error fetching data:', error));
 
-app.use(cors({ origin: "https://mchacks-deploy.vercel.app/" }));
+app.use(cors({ origin: "https://mchacks-deploy.onrender.com" }));
 app.use(express.json());
 
 // In-memory storage
